@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1></h1>
+                    <p class="texto__parrafo"></p>
+                </div>
+                <!-- caja blanca para ingresar datos representada por la etiqueta "input" lo bueno es que cada input tenga un identificador
+                 porque podria haber mas de uno y seria confuso -->
+                <input type="number" id="numeroDeUsuario" min="1" max="10" class="container__input">
+                <div class="chute container__botones">
+                    <!-- etiqueta botones, estas tienen eventos que esperan algo "onclick" necesita un atributo que se le dara mediante js
+                     a traves de funciones (bloques de codigo que realizan una tarea que puede o no retornar un valor) llamamos a la funcion que
+                     definimos en el archivo js "intentoDeUsuario" -->
+                    <button onclick="ingresarIntento();" class="container__boton">Intentar</button>
+                   <!-- El boton de nuevo juego esta desabilitado con el atributo disabled, pero nosotros lo queremos tener asi hasta que el usuario
+                    pierda o gane el juego anterior, recien ahi lo vamos a habilitar 
+                    con el onclick llamamos a la funcion reiniciarJuego()--> 
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
+                </div>
+            </div>
+            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+        </div>
+    </div>
+
+
+
+    <!-- etiqueta para relacion con el archivo de javascript -->
+    <script src="app.js" defer></script>
+</body>
+
+</html>
