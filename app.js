@@ -90,6 +90,7 @@ function ingresarIntento() {
 
     if (intentos >= cantidadMaxDeIntentos) {
         asignatTextoElemento('p', `Ya superaste la cantidad máxima de ${cantidadMaxDeIntentos} intentos disponibles. :(`);
+        limpiarCampo();
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
         
